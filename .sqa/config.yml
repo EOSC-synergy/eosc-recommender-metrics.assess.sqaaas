@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/ARGOeu/eosc-recommender-metrics:
+      branch: master
+      repo: https://github.com/ARGOeu/eosc-recommender-metrics
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/ARGOeu/eosc-recommender-metrics git:
+        commands:
+        - /usr/bin/env sh .sqa/script.skinny-red-sheep.sh
+        container: qc.acc_muggy-purple-butterfly
+  QC.Doc:
+    repos:
+      github.com/ARGOeu/eosc-recommender-metrics find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-teal-labradoodle.sh
+        container: qc.doc_crappy-silver-orangutan
+      github.com/ARGOeu/eosc-recommender-metrics git:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-firebrick-eel.sh
+        container: qc.doc_sloppy-azure-bat
+      github.com/ARGOeu/eosc-recommender-metrics markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-goldenrod-havanese.sh
+        container: qc.doc_woolly-magnolia-cow
+  QC.Lic:
+    repos:
+      github.com/ARGOeu/eosc-recommender-metrics licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.sickly-teal-bear.sh
+        container: qc.lic_flimsy-lemon-rottweiler
+  QC.Sec:
+    repos:
+      github.com/ARGOeu/eosc-recommender-metrics bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-brown-akita.sh
+        container: qc.sec_ugly-malachite-bobcat
+  QC.Sty:
+    repos:
+      github.com/ARGOeu/eosc-recommender-metrics flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-olive-termite.sh
+        container: qc.sty_whiny-silver-nightingale
+      github.com/ARGOeu/eosc-recommender-metrics jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-russet-lobster.sh
+        container: qc.sty_sunny-saffron-mongoose
+  QC.Ver:
+    repos:
+      github.com/ARGOeu/eosc-recommender-metrics get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-pumpkin-spaniel.sh
+        container: qc.ver_squeaky-burgundy-mandrill
+timeout: 5400
