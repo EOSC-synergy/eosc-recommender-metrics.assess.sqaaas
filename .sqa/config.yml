@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/ARGOeu/eosc-recommender-metrics git:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-red-sheep.sh
-        container: qc.acc_muggy-purple-butterfly
+        - /usr/bin/env sh .sqa/script.flaky-red-gorilla.sh
+        container: qc.acc_skinny-lilac-barnacle
   QC.Doc:
     repos:
       github.com/ARGOeu/eosc-recommender-metrics find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-teal-labradoodle.sh
-        container: qc.doc_crappy-silver-orangutan
+        - /usr/bin/env sh .sqa/script.lousy-teal-chow.sh
+        container: qc.doc_trippy-apricot-eagle
       github.com/ARGOeu/eosc-recommender-metrics git:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-firebrick-eel.sh
-        container: qc.doc_sloppy-azure-bat
+        - /usr/bin/env sh .sqa/script.nippy-myrtle-hound.sh
+        container: qc.doc_nippy-wheat-shrimp
       github.com/ARGOeu/eosc-recommender-metrics markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-goldenrod-havanese.sh
-        container: qc.doc_woolly-magnolia-cow
+        - /usr/bin/env sh .sqa/script.breezy-red-lemming.sh
+        container: qc.doc_seedy-pear-rhinoceros
   QC.Lic:
     repos:
       github.com/ARGOeu/eosc-recommender-metrics licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-teal-bear.sh
-        container: qc.lic_flimsy-lemon-rottweiler
+        - /usr/bin/env sh .sqa/script.slaphappy-sangria-starfish.sh
+        container: qc.lic_lousy-blue-mammoth
   QC.Sec:
     repos:
       github.com/ARGOeu/eosc-recommender-metrics bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-brown-akita.sh
-        container: qc.sec_ugly-malachite-bobcat
+        - /usr/bin/env sh .sqa/script.shaggy-taupe-javanese.sh
+        container: qc.sec_pretty-rust-devil
   QC.Sty:
     repos:
       github.com/ARGOeu/eosc-recommender-metrics flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-olive-termite.sh
-        container: qc.sty_whiny-silver-nightingale
+        - /usr/bin/env sh .sqa/script.craggy-saffron-dogfish.sh
+        container: qc.sty_baggy-cornflower-maltese
       github.com/ARGOeu/eosc-recommender-metrics jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-russet-lobster.sh
-        container: qc.sty_sunny-saffron-mongoose
+        - /usr/bin/env sh .sqa/script.baggy-malachite-grouse.sh
+        container: qc.sty_lovely-rose-tetra
   QC.Ver:
     repos:
       github.com/ARGOeu/eosc-recommender-metrics get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-pumpkin-spaniel.sh
-        container: qc.ver_squeaky-burgundy-mandrill
+        - /usr/bin/env sh .sqa/script.wimpy-yellow-bordeaux.sh
+        container: qc.ver_foggy-vermilion-harrier
 timeout: 5400
