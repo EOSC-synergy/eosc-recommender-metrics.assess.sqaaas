@@ -1,62 +1,68 @@
 config:
   credentials: []
   project_repos:
-    github.com/ARGOeu/eosc-recommender-metrics:
-      branch: master
-      repo: https://github.com/ARGOeu/eosc-recommender-metrics
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.7
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/argoeu/eosc-recommender-metrics:
+      branch: devel
+      repo: https://github.com/argoeu/eosc-recommender-metrics
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics git:
+      github.com/argoeu/eosc-recommender-metrics git:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-ecru-hornet.sh
-        container: qc.acc_clammy-indigo-tamarin
+        - /usr/bin/env sh .sqa/script.sleazy-olive-horse.sh
+        container: qc.acc_gloppy-beige-squirt
   QC.Doc:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics find_doc_files.py:
+      github.com/argoeu/eosc-recommender-metrics find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-myrtle-ray.sh
-        container: qc.doc_homely-magnolia-monster
-      github.com/ARGOeu/eosc-recommender-metrics git:
+        - /usr/bin/env sh .sqa/script.messy-jade-spider.sh
+        container: qc.doc_chewy-teal-chin
+      github.com/argoeu/eosc-recommender-metrics git:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-ruby-wallaby.sh
-        container: qc.doc_stinky-azure-russel
-      github.com/ARGOeu/eosc-recommender-metrics markdownlint:
+        - /usr/bin/env sh .sqa/script.wimpy-amethyst-moorhen.sh
+        container: qc.doc_skimpy-chestnut-frog
+      github.com/argoeu/eosc-recommender-metrics markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-bronze-retriever.sh
-        container: qc.doc_jumpy-ivory-newt
+        - /usr/bin/env sh .sqa/script.freaky-salmon-chimpanzee.sh
+        container: qc.doc_snoopy-lilac-grasshopper
   QC.Lic:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics licensee:
+      github.com/argoeu/eosc-recommender-metrics licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-brass-lionfish.sh
-        container: qc.lic_scanty-sepia-skunk
+        - /usr/bin/env sh .sqa/script.shabby-alizarin-turtle.sh
+        container: qc.lic_craggy-teal-flamingo
+  QC.Met:
+    repos:
+      github.com/argoeu/eosc-recommender-metrics cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-jade-manatee.sh
+        container: qc.met_blurry-peach-kingfisher
   QC.Sec:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics bandit:
+      github.com/argoeu/eosc-recommender-metrics bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-razzmatazz-bandicoot.sh
-        container: qc.sec_slimy-cardinal-chinchilla
+        - /usr/bin/env sh .sqa/script.scanty-ivory-weasel.sh
+        container: qc.sec_grumpy-asparagus-monster
   QC.Sty:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics flake8:
+      github.com/argoeu/eosc-recommender-metrics flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-persimmon-cuttlefish.sh
-        container: qc.sty_snippy-tangerine-olm
-      github.com/ARGOeu/eosc-recommender-metrics jsonlint:
+        - /usr/bin/env sh .sqa/script.shabby-cerise-akbash.sh
+        container: qc.sty_sleazy-yellow-hyena
+      github.com/argoeu/eosc-recommender-metrics jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-russet-dunker.sh
-        container: qc.sty_lanky-aqua-sponge
+        - /usr/bin/env sh .sqa/script.silly-silver-lizard.sh
+        container: qc.sty_gamy-tomato-goose
   QC.Ver:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics get_git_tags.py:
+      github.com/argoeu/eosc-recommender-metrics get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-apricot-armadillo.sh
-        container: qc.ver_snippy-pear-dragonfly
+        - /usr/bin/env sh .sqa/script.chewy-buff-bombay.sh
+        container: qc.ver_sleepy-zucchini-shrimp
 timeout: 5400
