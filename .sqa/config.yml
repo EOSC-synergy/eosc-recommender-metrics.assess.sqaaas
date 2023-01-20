@@ -1,62 +1,68 @@
 config:
   credentials: []
   project_repos:
-    github.com/ARGOeu/eosc-recommender-metrics:
-      branch: master
-      repo: https://github.com/ARGOeu/eosc-recommender-metrics
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.7
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/themiszamani/eosc-recommender-metrics:
+      branch: QC.Doc02.X-updates
+      repo: https://github.com/themiszamani/eosc-recommender-metrics
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics git:
+      github.com/themiszamani/eosc-recommender-metrics git:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-buff-manatee.sh
-        container: qc.acc_squeaky-green-hyrax
+        - /usr/bin/env sh .sqa/script.queasy-alizarin-armadillo.sh
+        container: qc.acc_boozy-brass-buzzard
   QC.Doc:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics find_doc_files.py:
+      github.com/themiszamani/eosc-recommender-metrics find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-chestnut-hare.sh
-        container: qc.doc_gimpy-peach-quoll
-      github.com/ARGOeu/eosc-recommender-metrics git:
+        - /usr/bin/env sh .sqa/script.randy-mauve-wombat.sh
+        container: qc.doc_scummy-bistre-lobster
+      github.com/themiszamani/eosc-recommender-metrics git:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-red-skunk.sh
-        container: qc.doc_seedy-lilac-leopard
-      github.com/ARGOeu/eosc-recommender-metrics markdownlint:
+        - /usr/bin/env sh .sqa/script.droopy-periwinkle-woodpecker.sh
+        container: qc.doc_hilly-copper-wrasse
+      github.com/themiszamani/eosc-recommender-metrics markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-celadon-monkey.sh
-        container: qc.doc_queasy-linen-magpie
+        - /usr/bin/env sh .sqa/script.foggy-sapphire-tetra.sh
+        container: qc.doc_lousy-harlequin-catfish
   QC.Lic:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics licensee:
+      github.com/themiszamani/eosc-recommender-metrics licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-red-ray.sh
-        container: qc.lic_whiny-purple-quetzal
+        - /usr/bin/env sh .sqa/script.scaly-bronze-woodlouse.sh
+        container: qc.lic_paltry-orchid-balinese
+  QC.Met:
+    repos:
+      github.com/themiszamani/eosc-recommender-metrics cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.dorky-celadon-whippet.sh
+        container: qc.met_sunny-seashell-hedgehog
   QC.Sec:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics bandit:
+      github.com/themiszamani/eosc-recommender-metrics bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-linen-ant.sh
-        container: qc.sec_boozy-ruby-husky
+        - /usr/bin/env sh .sqa/script.silly-turquoise-shrimp.sh
+        container: qc.sec_skinny-chartreuse-quail
   QC.Sty:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics flake8:
+      github.com/themiszamani/eosc-recommender-metrics flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-teal-hyena.sh
-        container: qc.sty_chummy-lavender-hare
-      github.com/ARGOeu/eosc-recommender-metrics jsonlint:
+        - /usr/bin/env sh .sqa/script.seedy-black-bordeaux.sh
+        container: qc.sty_nerdy-silver-bulldog
+      github.com/themiszamani/eosc-recommender-metrics jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-saffron-barracuda.sh
-        container: qc.sty_ready-black-whippet
+        - /usr/bin/env sh .sqa/script.messy-emerald-drever.sh
+        container: qc.sty_muzzy-plum-snail
   QC.Ver:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics get_git_tags.py:
+      github.com/themiszamani/eosc-recommender-metrics get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-harlequin-seal.sh
-        container: qc.ver_foggy-ultramarine-terrier
+        - /usr/bin/env sh .sqa/script.zippy-turquoise-caterpillar.sh
+        container: qc.ver_hilly-yellow-chinchilla
 timeout: 5400
