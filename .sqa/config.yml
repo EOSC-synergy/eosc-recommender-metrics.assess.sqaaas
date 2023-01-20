@@ -15,54 +15,54 @@ sqa_criteria:
     repos:
       github.com/themiszamani/eosc-recommender-metrics git:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-alizarin-armadillo.sh
-        container: qc.acc_boozy-brass-buzzard
+        - /usr/bin/env sh .sqa/script.snappy-khaki-chipmunk.sh
+        container: qc.acc_randy-wheat-guppy
   QC.Doc:
     repos:
       github.com/themiszamani/eosc-recommender-metrics find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-mauve-wombat.sh
-        container: qc.doc_scummy-bistre-lobster
+        - /usr/bin/env sh .sqa/script.flabby-maroon-kakapo.sh
+        container: qc.doc_sickly-indigo-shark
       github.com/themiszamani/eosc-recommender-metrics git:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-periwinkle-woodpecker.sh
-        container: qc.doc_hilly-copper-wrasse
+        - /usr/bin/env sh .sqa/script.pokey-bronze-spider.sh
+        container: qc.doc_homey-rose-bullfrog
       github.com/themiszamani/eosc-recommender-metrics markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-sapphire-tetra.sh
-        container: qc.doc_lousy-harlequin-catfish
+        - /usr/bin/env sh .sqa/script.shaky-rust-fousek.sh
+        container: qc.doc_dorky-chestnut-lemming
   QC.Lic:
     repos:
       github.com/themiszamani/eosc-recommender-metrics licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-bronze-woodlouse.sh
-        container: qc.lic_paltry-orchid-balinese
+        - /usr/bin/env sh .sqa/script.breezy-vermilion-drever.sh
+        container: qc.lic_cloudy-heliotrope-olm
   QC.Met:
     repos:
       github.com/themiszamani/eosc-recommender-metrics cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-celadon-whippet.sh
-        container: qc.met_sunny-seashell-hedgehog
+        - /usr/bin/env sh .sqa/script.pasty-maroon-flounder.sh
+        container: qc.met_hasty-lilac-bulldog
   QC.Sec:
     repos:
       github.com/themiszamani/eosc-recommender-metrics bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-turquoise-shrimp.sh
-        container: qc.sec_skinny-chartreuse-quail
+        - /usr/bin/env sh .sqa/script.pasty-pear-catfish.sh
+        container: qc.sec_lumpy-amber-cat
   QC.Sty:
     repos:
       github.com/themiszamani/eosc-recommender-metrics flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-black-bordeaux.sh
-        container: qc.sty_nerdy-silver-bulldog
+        - /usr/bin/env sh .sqa/script.stealthy-brass-newt.sh
+        container: qc.sty_shabby-copper-dragon
       github.com/themiszamani/eosc-recommender-metrics jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-emerald-drever.sh
-        container: qc.sty_muzzy-plum-snail
+        - /usr/bin/env sh .sqa/script.zippy-ultramarine-squirt.sh
+        container: qc.sty_pokey-pink-macaw
   QC.Ver:
     repos:
       github.com/themiszamani/eosc-recommender-metrics get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-turquoise-caterpillar.sh
-        container: qc.ver_hilly-yellow-chinchilla
+        - /usr/bin/env sh .sqa/script.greasy-razzmatazz-affenpinscher.sh
+        container: qc.ver_beady-mustard-loon
 timeout: 5400
