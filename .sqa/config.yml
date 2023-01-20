@@ -1,68 +1,68 @@
 config:
   credentials: []
   project_repos:
+    github.com/ARGOeu/eosc-recommender-metrics:
+      branch: devel
+      repo: https://github.com/ARGOeu/eosc-recommender-metrics
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.7
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/themiszamani/eosc-recommender-metrics:
-      branch: QC.Doc02.X-updates
-      repo: https://github.com/themiszamani/eosc-recommender-metrics
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/themiszamani/eosc-recommender-metrics git:
+      github.com/ARGOeu/eosc-recommender-metrics git:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-khaki-chipmunk.sh
-        container: qc.acc_randy-wheat-guppy
+        - /usr/bin/env sh .sqa/script.greasy-scarlet-gerbil.sh
+        container: qc.acc_geeky-fuchsia-yak
   QC.Doc:
     repos:
-      github.com/themiszamani/eosc-recommender-metrics find_doc_files.py:
+      github.com/ARGOeu/eosc-recommender-metrics find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-maroon-kakapo.sh
-        container: qc.doc_sickly-indigo-shark
-      github.com/themiszamani/eosc-recommender-metrics git:
+        - /usr/bin/env sh .sqa/script.geeky-white-yak.sh
+        container: qc.doc_hasty-bronze-ragdoll
+      github.com/ARGOeu/eosc-recommender-metrics git:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-bronze-spider.sh
-        container: qc.doc_homey-rose-bullfrog
-      github.com/themiszamani/eosc-recommender-metrics markdownlint:
+        - /usr/bin/env sh .sqa/script.cloudy-cardinal-woodpecker.sh
+        container: qc.doc_nerdy-celadon-chipmunk
+      github.com/ARGOeu/eosc-recommender-metrics markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-rust-fousek.sh
-        container: qc.doc_dorky-chestnut-lemming
+        - /usr/bin/env sh .sqa/script.cozy-orchid-chamois.sh
+        container: qc.doc_snappy-khaki-swan
   QC.Lic:
     repos:
-      github.com/themiszamani/eosc-recommender-metrics licensee:
+      github.com/ARGOeu/eosc-recommender-metrics licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-vermilion-drever.sh
-        container: qc.lic_cloudy-heliotrope-olm
+        - /usr/bin/env sh .sqa/script.hilly-peach-guppy.sh
+        container: qc.lic_seedy-cinnamon-seahorse
   QC.Met:
     repos:
-      github.com/themiszamani/eosc-recommender-metrics cff-converter-python:
+      github.com/ARGOeu/eosc-recommender-metrics cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-maroon-flounder.sh
-        container: qc.met_hasty-lilac-bulldog
+        - /usr/bin/env sh .sqa/script.foggy-lavender-bordeaux.sh
+        container: qc.met_thirsty-linen-anteater
   QC.Sec:
     repos:
-      github.com/themiszamani/eosc-recommender-metrics bandit:
+      github.com/ARGOeu/eosc-recommender-metrics bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-pear-catfish.sh
-        container: qc.sec_lumpy-amber-cat
+        - /usr/bin/env sh .sqa/script.droopy-carmine-olm.sh
+        container: qc.sec_woolly-magenta-hound
   QC.Sty:
     repos:
-      github.com/themiszamani/eosc-recommender-metrics flake8:
+      github.com/ARGOeu/eosc-recommender-metrics flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-brass-newt.sh
-        container: qc.sty_shabby-copper-dragon
-      github.com/themiszamani/eosc-recommender-metrics jsonlint:
+        - /usr/bin/env sh .sqa/script.snoopy-eggplant-mist.sh
+        container: qc.sty_beady-olivine-dollar
+      github.com/ARGOeu/eosc-recommender-metrics jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-ultramarine-squirt.sh
-        container: qc.sty_pokey-pink-macaw
+        - /usr/bin/env sh .sqa/script.zippy-zucchini-coati.sh
+        container: qc.sty_crabby-coral-collie
   QC.Ver:
     repos:
-      github.com/themiszamani/eosc-recommender-metrics get_git_tags.py:
+      github.com/ARGOeu/eosc-recommender-metrics get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-razzmatazz-affenpinscher.sh
-        container: qc.ver_beady-mustard-loon
+        - /usr/bin/env sh .sqa/script.crappy-tangerine-dunker.sh
+        container: qc.ver_cheeky-celadon-gar
 timeout: 5400
